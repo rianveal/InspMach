@@ -2,6 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Play)
 @import url(http://fonts.googleapis.com/css?family=Audiowide)
 @import url(http://fonts.googleapis.com/css?family=Russo+One)
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css)
+
 
 // font-family: 'Roboto Condensed', sans-serif
 // font-family: 'Play', sans-serif
@@ -11,51 +13,68 @@
 // Color set
 c_gray = #212121
 c_orange = #BF360C
+c_orange_down = #FF7043
+c_orange_up = #FF5722
 c_white = #FAFAFA
 c_green = #8BC34A
+c_green_strong = #33691E
 
 body
 	background-color c_gray
+	height 100%
+	font-family 'Roboto Condensed', sans-serif
+	
+.logo
+	position absolute
+	width 50px
+	height 50px	
+	border-radius 50%
+	top 16px
 	
 header
 	color c_orange
 	font-family 'Audiowide', cursive
 	border-bottom 1px solid c_orange
 	margin-bottom 30px
+	padding-left 60px
 	h1
-		padding-left 2%
-	img 
-		width 50px
-		height 50px	
-		border-radius 50%
-		vertical-align bottom
-
+		margin-bottom 0
+		font-size 26px
+	p
+		font-size 13px
+		margin-top 0
+		color c_white
+		span
+			color c_orange
+	nav	
+		color c_white
+		ul
+			display none
+		h4
+			margin-top 2px
+			margin-bottom 2px
+			&:hover + ul
+				display block
+								
+		
 .content
-		position: absolute;
-		top:50%;
-		left:50%;
-		width:350px;
-		margin-left:-175px;
-		height:300px;
-		margin-top:-150px;
+		position absolute
+		top 350px
+		left 50%
+		width 350px
+		margin-left:-175px
+		height 300px
+		margin-top -150px
 		
 .center
 	margin-right auto
 	margin-left auto
 	text-align center
-
-.title
-	font-family 'Audiowide', cursive
-	color c_white
-	font-size 20px
-	h2, span
-			color c_orange
-	p
-		margin-top -20px		
-		
-.container
+			
+.login
 	width 350px
-	
+	h2
+		color c_white
 	form
 		padding-top 20px
 	input
@@ -67,16 +86,15 @@ header
 		border-bottom 1px solid c_orange
 		color c_white
 		font-size 18px
-		font-family 'Roboto Condensed', sans-serif
 		&:focus
 			outline none
 			border none;
-			border-bottom 2px solid c_white
+			border-bottom 2px solid c_orange
 			transition 1s ease-in-out
-			background-color c_orange
 		&:hover
 			transition 1s ease-in-out
-			background-color c_orange	
+			border-bottom 2px solid c_orange
+
 	div
 		padding-bottom 15px	
 	button
@@ -86,15 +104,19 @@ header
 		border none;
 		font-size 15px
 		font-family 'Roboto Condensed', sans-serif
-		border-radius 15px
+		border-radius 10px
 		color c_white
+		cursor pointer
+		box-shadow 0px 2.5px 0 c_orange_up
 		&:hover
-			transition 1s ease-in-out
+			transition .5s ease-in-out
 			background-color c_green
+			color c_white
+			box-shadow 0px 2.5px 0 c_green_strong
 		&:focus
 			border none
 			outline none	
-			transition 1s ease-in-out	
+			transition .5s ease-in-out	
 		
 
 	
