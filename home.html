@@ -13,14 +13,55 @@
 		<h1>INSP.MACH</h1>
 		<p><span>INSP</span>ECTION <span>MACH</span>INE</p>
 		<nav>
-			<h4>Ricardo Velasquez A. <i class="fa fa-angle-down"></i></h4>
-			<ul>
+			<h4 id="user">Ricardo A. Velasquez A. <i class="fa fa-angle-down"></i></h4>
+			<ul id="userOptions">
 				<li>Me</li>
 				<li>Logout</li>
 			</ul>
-
 		</nav>
 	</header>
 	
+	<div class="content-items">
+			
+			<p id="title-item-PI"><i class="fa fa-minus-circle"></i>Pending inspection machines</p>
+			<ul class="item" id="items-PI">
+				<li>Machine pending No.1 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
+				<li>Machine pending No.2 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
+				<li>Machine pending No.3 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
+				<footer>
+					<a href="#">+3</a>
+				</footer>
+			</ul>
+
+			<p id="title-item-MI"><i class="fa fa-check"></i>Machine inspected </p>
+			<ul class="item" id="items-MI">
+				<li>Machine Ispected. No. 1 <a href="#"><i class="fa fa-eye"></i></a></li>
+				<li>Machine Ispected. No. 2 <a href="#"><i class="fa fa-eye"></i></a></li>
+				<li>Machine Ispected. No. 3 <a href="#"><i class="fa fa-eye"></i></a></li>
+				<footer>
+					<a href="#">+3</a>
+				</footer>
+			</ul>
+
+			<p id="title-item-SI"><i class="fa fa-search-plus"></i>Search inspections </p>
+			<ul class="item" data-item="search" id="items-SI">
+				<li id="specific">Specific <i class="fa fa-filter"></i> </li>
+				<li>Date Range <i class="fa fa-calendar"></i></li>
+				<form id="searchMach" class="search-Mach" action="">
+					<div>
+						<label for="">Id Machine</label>
+					</div>
+					<div>
+						<input type="text">
+					</div>
+					
+				</form>
+			</ul>
+	</div>
+
+
+	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="assets/js/actions.js"></script>		
 </body>
 </html>
