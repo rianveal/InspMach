@@ -15,29 +15,28 @@
 		<nav>
 			<h4 id="user">Ricardo A. Velasquez A. <i class="fa fa-angle-down"></i></h4>
 			<ul id="userOptions">
-				<li>Me</li>
-				<li>Logout</li>
+				<li><a href="#"><i class="fa fa-user"></i> Me</a></li>
+				<li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<div class="content-items">
-			
 			<p id="title-item-PI"><i class="fa fa-minus-circle"></i>Pending inspection machines</p>
 			<ul class="item" id="items-PI">
-				<li>Machine pending No.1 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
-				<li>Machine pending No.2 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
-				<li>Machine pending No.3 <a href="#"><i class="fa fa-pencil-square-o"></i></a></li>
+				<li><a href="inspectionMachine.html">Machine pending No.1 <i class="fa fa-pencil-square-o"></i></a></li>
+				<li><a href="#">Machine pending No.2 <i class="fa fa-pencil-square-o"></i></a></li>
+				<li><a href="#">Machine pending No.3 <i class="fa fa-pencil-square-o"></i></a></li>
 				<footer>
 					<a href="#">+3</a>
 				</footer>
 			</ul>
 
-			<p id="title-item-MI"><i class="fa fa-check"></i>Machine inspected </p>
+			<p id="title-item-MI"><i class="fa fa-check"></i>Machine inspected</p>
 			<ul class="item" id="items-MI">
-				<li>Machine Ispected. No. 1 <a href="#"><i class="fa fa-eye"></i></a></li>
-				<li>Machine Ispected. No. 2 <a href="#"><i class="fa fa-eye"></i></a></li>
-				<li>Machine Ispected. No. 3 <a href="#"><i class="fa fa-eye"></i></a></li>
+				<li><a href="#">Machine Ispected. No. 1 <i class="fa fa-eye"></i></a></li>
+				<li><a href="#">Machine Ispected. No. 2 <i class="fa fa-eye"></i></a></li>
+				<li><a href="#">Machine Ispected. No. 3 <i class="fa fa-eye"></i></a></li>
 				<footer>
 					<a href="#">+3</a>
 				</footer>
@@ -46,15 +45,27 @@
 			<p id="title-item-SI"><i class="fa fa-search-plus"></i>Search inspections </p>
 			<ul class="item" data-item="search" id="items-SI">
 				<li id="specific">Specific <i class="fa fa-filter"></i> </li>
-				<li>Date Range <i class="fa fa-calendar"></i></li>
-				<form id="searchMach" class="search-Mach" action="">
+				<li id="dateSearch">Date Range <i class="fa fa-calendar"></i></li>
+				<form id="searchMach" class="search-Mach" actions="">
 					<div>
 						<label for="">Id Machine</label>
 					</div>
 					<div>
 						<input type="text">
+						<button class="btn btn-medium">Go</button>
 					</div>
-					
+				</form>
+				<form id="searchDate" class="search-Mach" action="">
+					<div>
+						<label for="">Start date</label>
+						<label for="">Final date</label>
+					</div>
+					<div>
+						<input type="Date">
+						<input type="Date">
+						<button class="btn btn-medium">Go</button>
+					</div>
+
 				</form>
 			</ul>
 	</div>

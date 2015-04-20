@@ -9,6 +9,8 @@ var $user = $('#user');
 var $userOptions = $('#userOptions')
 var $specific = $('#specific')
 var $searchMach = $('#searchMach')
+var $dateSearch = $('#dateSearch')
+var $searchDate = $('#searchDate')
 
 function seeItemsPI(){
 	$itemsPI.slideToggle();
@@ -28,6 +30,11 @@ function seeOptionsUser(){
 
 function seeForm(){
 	$searchMach.slideToggle();
+	$searchDate.Display = 'none'
+}
+
+function seeFormDate(){
+	$searchDate.slideToggle();
 }
 
 
@@ -36,4 +43,5 @@ $t_itemMI.click (seeItemsMI);
 $t_itemSI.click (seeItemsSI);
 $user.click (seeOptionsUser);
 $specific.click (seeForm);
+$dateSearch.click (seeFormDate);
 

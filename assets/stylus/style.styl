@@ -12,12 +12,14 @@
 
 // Color set
 c_gray = #212121
+c_gray_down = #BDBDBD
 c_orange = #BF360C
 c_orange_down = #FF7043
 c_orange_up = #FF5722
 c_white = #FAFAFA
 c_green = #8BC34A
 c_green_strong = #33691E
+c_black = #000000
 
 body
 	background-color c_gray
@@ -30,6 +32,11 @@ body
 	height 50px	
 	border-radius 50%
 	top 16px
+
+.title
+	margin-left 2%
+	color c_orange
+	width 30%	
 	
 header
 	color c_orange
@@ -50,13 +57,15 @@ header
 		color c_white
 		ul
 			display none
+			li
+				list-style none
+				a
+					text-decoration none
+					color c_white
+					&:hover
+						color c_orange
 		h4
 			cursor pointer	
-		// h4
-		// 	margin-top 2px
-		// 	margin-bottom 2px
-		// 	&:hover + ul
-		// 		display block
 									
 .content
 	position absolute
@@ -81,13 +90,64 @@ header
 			color c_white
 		i
 			padding-right 30px
-			font-size 22px
+			font-size 22px		
 
+.content-machine
+	h3
+		padding-left 65%
+		color c_white
+		margin-bottom 0
+		color c_orange
+	span
+		display block
+		padding-left 65%
+		color c_white
+		margin-bottom 10px
+		font-size 14px
+	article
+		padding-left 0
+		padding-bottom 4% 
+		border-bottom 2px solid c_orange
+		div
+			width 49%
+			margin-right 0
+			display inline-block
+			&:nth-child(3)
+				width 100%
+				span
+					margin-left 0
+				textarea
+					margin-left 2%
+		span, label
+			margin-top 2%
+			margin-left 2%
+			margin-bottom 2%
+			font-size 16px
+			color c_gray_down
+			padding-left 2%
+		input, textarea
+			margin-left 4%
+			height 25px
+			width 90%
+			font-size 18px
+			padding 2%
+			border-radius 5px
+			border 1px solid c_gray_down
+			background-color transparent
+			color c_orange
+			//pointer-events none
+		textarea
+			height 50px
+			width 91%
+			font-family 'Roboto Condensed', sans-serif
+		
+			
 .item
 	display none
 	background-color c_white
 	padding 15px
 	border-bottom 4px solid c_orange_up
+	border-radius 0 0 12px 12px
 	li
 		list-style none
 		padding 0.5em
@@ -95,7 +155,8 @@ header
 			text-decoration none
 			color c_gray
 			&:hover
-				color c_orange	
+				color c_orange
+						
 	footer
 			background-color c_orange_up
 			width 20px
@@ -128,7 +189,9 @@ ul[data-item="search"]
 		padding-left 5px
 		&:focus
 			outline none
-			border 1px solid c_orange_down						
+			border 1px solid c_orange_down
+	label:nth-child(1)
+		margin-right 115px								
 				
 .center
 	margin-right auto
@@ -161,26 +224,52 @@ ul[data-item="search"]
 
 	div
 		padding-bottom 15px	
-	button
-		height 35px
-		width 70px
-		background-color c_orange
-		border none;
-		font-size 15px
-		font-family 'Roboto Condensed', sans-serif
-		border-radius 10px
+
+
+.btn
+	height 35px
+	width 70px
+	background-color c_orange
+	border none;
+	font-size 15px
+	font-family 'Roboto Condensed', sans-serif
+	border-radius 10px
+	color c_white
+	cursor pointer
+	box-shadow 0px 2.5px 0 c_orange_up
+	&:hover
+		transition .5s ease-in-out
+		background-color c_green
 		color c_white
-		cursor pointer
-		box-shadow 0px 2.5px 0 c_orange_up
-		&:hover
-			transition .5s ease-in-out
-			background-color c_green
-			color c_white
-			box-shadow 0px 2.5px 0 c_green_strong
-		&:focus
-			border none
-			outline none	
-			transition .5s ease-in-out	
+		box-shadow 0px 2.5px 0 c_green_strong
+	&:focus
+		border none
+		outline none	
+		transition .5s ease-in-out
+
+.btn-medium
+	height 28px	
+	
+@media (max-width 400px)
+	.content-machine
+		h3, span
+			padding-left 50%
+		article	
+			padding-bottom 8%
+			div
+				width 100%
+				&:nth-child(3)
+					span
+						margin-left 2%
+					textarea
+						margin-left 4%
+			textarea
+				height 70px
+				width 90%
+	
+						   
+					
+								
 		
 
 	
